@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<title>REDBALLFIVE</title>
+  	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <h1>The Motha-land</h1>
+  </head>
+  <body>
+      <table border="2px;" align= "center">
+  	    <tr>
+          <td><button id="diaur">&#8662;</button></td>
+          <td><button id="up">&uArr;</button></td>
+          <td><button id="diaul">&#8663;</button></td>
+        </tr>
+        <tr>  
+          <td><button id="left">&lArr;</button></td>
+          <td><button id="bounce">&#x25ef;</button></td>
+          <td><button id="right">&rArr;</button></td>
+        </tr>
+        <tr>  
+          <td><button id="diadr">&#8665;</button></td>
+          <td><button id="down">&dArr;</button></td>
+          <td><button id="diadl">&#8664;</button></td>
+        </tr>
+        <tr>  
+          <td><button id="triangle">&#x25b2;</button></td>
+          <td><button id="square">&#x25a0;</button></td>
+          <td><button id="octagon">&empty;</button></td>
+        </tr>  
+      </table>
+    <script>
+  	  $( "#right" ).click(function(){
+        $( "#redball" ).animate({ "left": "+=50px" }, "slow" );
+}); 
+      $( "#left" ).click(function(){
+        $( "#redball" ).animate({ "left": "-=50px" }, "slow" );
+});
+      $( "#up" ).click(function(){
+        $( "#redball" ).animate({ "top": "-=50px" }, "slow" );
+});
+      $( "#down" ).click(function(){
+        $( "#redball" ).animate({ "top": "+=50px" }, "slow" );
+});
+      $( "#diadl" ).click(function(){
+        $( "#redball" ).animate({ "top": "+=50px", "left": "+=50px" }, "slow" );
+});
+      $( "#diaur" ).click(function(){
+        $( "#redball" ).animate({ "top": "-=50px", "left": "-=50px" }, "slow" );
+});      
+      $( "#diadr" ).click(function(){
+        $( "#redball" ).animate({ "top": "+=50px", "left": "-=50px" }, "slow" );
+});      
+      $( "#diaul" ).click(function(){
+        $( "#redball" ).animate({ "top": "-=50px", "left": "+=50px" }, "slow" );
+});      
+     $("#bounce").click(function() {
+        doBounce($("#redball"), 3, '50px', 300);   
+});
+
+function doBounce(element, times, distance, speed) {
+    for(i = 0; i < times; i++) {
+        element.animate({marginTop: '-='+distance},speed)
+            .animate({marginTop: '+='+distance},speed);
+    }        
+}
+      $( "#triangle" ).click(function(){
+        $( "#redball" ).animate({  }, "slow" );
+});        
+      $( "#octagon" ).click(function(){
+        $( "#redball" ).animate({  }, "slow" );
+});     
+      $( "#square" ).click(function(){
+        $("#redball").animate({},"slow");
+});     
+   	</script>
+  	<img style="position: absolute; left: 140px; top: 100px;" id="redball" src="redball.jpg"/>
+  </body>
+</html>	

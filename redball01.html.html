@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>Redball Zero One</title>
+        <script>
+        function sayhello()
+        {
+          alert("Hello!");
+        }
+        function moveleft()
+        {
+          redball.left=redball.left-30;
+        }
+        function moveright()
+        {
+          redball.left=redball.left+30;
+        }
+        function moveup()
+        {
+          redball.top=redball.top-30;
+        }
+        function movedown()
+        {
+          redball.top=redball.top+30;
+        }
+        function movediagdownright()
+        {
+          redball.top=redball.top+30;
+            redball.left=redball.left+30;
+        }
+        function movediagdownleft()
+        {
+          redball.top=redball.top+30;
+            redball.left=redball.left-30;
+        }
+        function movediagupleft()
+        {
+          redball.top=redball.top-30;
+            redball.left=redball.left-30;
+        }
+        function movediagupright()
+        {
+          redball.top=redball.top-30;
+            redball.left=redball.left+30;
+        }
+        function square()
+        {
+          redball.top=redball.top-30;
+          redball.top=redball.top-30;
+          redball.top=redball.top-30;
+          redball.top=redball.top-30;
+          redball.top=redball.top-30;  
+          redball.left=redball.left+30;
+          redball.left=redball.left+30;
+          redball.left=redball.left+30;
+          redball.left=redball.left+30;
+          redball.left=redball.left+30;
+          redball.top=redball.top+30;
+          redball.top=redball.top+30;
+          redball.top=redball.top+30;
+          redball.top=redball.top+30;
+          redball.top=redball.top+30;
+          redball.left=redball.left-30;
+          redball.left=redball.left-30;
+          redball.left=redball.left-30;
+          redball.left=redball.left-30;
+          redball.left=redball.left-30;
+        }
+        function triangle()
+        {
+          redball.top=redball.top-30;
+          redball.top=redball.top-30;
+          redball.left=redball.left-30;
+          redball.left=redball.left-30;
+          redball.top=redball.top+30;
+          redball.top=redball.top+30;
+          redball.top=redball.top+30;
+        }
+        function bounce()
+        {}
+        function octagon()
+        {}
+        </script>
+        <script src="http://lrn.icstars.org/redball.js"></script>
+    </head>
+      <body>
+        The Motha-land!
+        <button onclick="sayhello();">Hello</button>
+        <table border="2px;" align= "center">
+        <tr>
+        <td><button onclick="movediagupleft();">Move Diagupleft</button></td>
+        <td><button onclick="moveup();">Move up</button></td>
+        <td><button onclick="movediagupright();">Move Diagupright</button></td>
+        </tr>
+        <tr>
+        <td><button onclick="moveleft();">Move left</button></td>
+        <td><button onclick="bounce();">Hello</button></td>
+        <td><button onclick="moveright();">Move right</button></td>
+        </tr>
+            <img id="redball" src="redball.jpg"/>
+        <tr>
+        <td><button onclick="movediagdownleft();">Move Diagdownleft</button></td>
+        <td><button onclick="movedown();">Move down</button></td>
+        <td><button onclick="movediagdownright();">Move DiagDownright</button></td>
+        </tr>
+        <tr>
+          <td><button onclick="triangle();">Triangle</button></td>
+          <td><button onclick="square();">Move square</button></td>
+          <td><button onclick="octagon();">octagon</button></td>
+        </tr>
+
+        </table>
+      </body>
+
+  </html>
