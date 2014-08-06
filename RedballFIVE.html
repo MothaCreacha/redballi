@@ -64,13 +64,25 @@ function doBounce(element, times, distance, speed) {
     }        
 }
       $( "#triangle" ).click(function(){
-        $( "#redball" ).animate({  }, "slow" );
+        $( "#redball" ).animate({ "top": "+=80px", "left": "+=80px" }, "fast" );
+        $( "#redball" ).animate({ "left": "-=160px" }, "fast");
+        $( "#redball" ).animate({ "top": "-=80px", "left": "+=80" }, "fast");
 });        
       $( "#octagon" ).click(function(){
-        $( "#redball" ).animate({  }, "slow" );
+       $( "#redball" ).animate({ "left": "+=50px" }, "fast" );
+       $( "#redball" ).animate({ "top": "+=60px", "left": "+=60px" }, "fast" );
+       $( "#redball" ).animate({ "top": "+=50px" }, "fast" );
+       $( "#redball" ).animate({ "top": "+=60px", "left": "-=60px" }, "fast" );
+       $( "#redball" ).animate({ "left": "-=50px" }, "fast" );
+       $( "#redball" ).animate({ "top": "-=60px", "left": "-=60px" }, "fast" );
+       $( "#redball" ).animate({ "top": "-=50px" }, "fast" );
+       $( "#redball" ).animate({ "top": "-=60px", "left": "+=60px" }, "fast" );
 });     
       $( "#square" ).click(function(){
-        $("#redball").animate({},"slow");
+        $( "#redball" ).animate({ "left": "-=80px" }, "fast");
+        $( "#redball" ).animate({ "top": "+=80px" }, "fast");
+        $( "#redball" ).animate({ "left": "+=80px" }, "fast");
+        $( "#redball" ).animate({ "top": "-=80px" }, "fast");
 });     
    	</script>
   	<img style="position: absolute; left: 140px; top: 100px;" id="redball" src="redball.jpg"/>
