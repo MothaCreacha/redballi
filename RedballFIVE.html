@@ -26,6 +26,9 @@
           <td><button id="triangle">&#x25b2;</button></td>
           <td><button id="square">&#x25a0;</button></td>
           <td><button id="octagon">&empty;</button></td>
+        </tr>
+        <tr>
+           <td><button id="x">&#x36f;</button>
         </tr>  
       </table>
     <script>
@@ -84,6 +87,9 @@ function doBounce(element, times, distance, speed) {
         $( "#redball" ).animate({ "left": "+=80px" }, "fast");
         $( "#redball" ).animate({ "top": "-=80px" }, "fast");
 });     
+      $( "#x" ).click(function(){
+        $( "#redball" ).animate({ "top": "-=50px", "left": "+=50px" }, "4000");
+      });
    	</script>
   	<img style="position: absolute; left: 140px; top: 100px;" id="redball" src="redball.jpg"/>
   </body>
