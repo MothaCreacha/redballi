@@ -15,7 +15,11 @@ function mygame(){
   };
   this.addball = function (){ 
     var redball = new ball();
+<<<<<<< HEAD
     var fromServer = '{"cssid":"redball","imgsrc":"http://www.howtodothings.com/files/u10023/hatching-chicken-eggs.jpg"}';
+=======
+    var fromServer = '{"cssid":"redball","imgsrc":"http://www.icstars.org/files/redball.jpg"}';
+>>>>>>> origin/master
     jQuery.extend(redball, JSON.parse(fromServer));
     redball.debug();
     redball.show();
