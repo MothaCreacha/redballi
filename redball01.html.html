@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>Redball Zero One</title>
+        <script>
+        function sayhello()
+        {
+          alert("Hello!");
+        }
+        function moveleft()
+        {
+          redball.left=redball.left-30;
+        }
+        function moveright()
+        {
+          redball.left=redball.left+30;
+        }
+        function moveup()
+        {
+          redball.top=redball.top-30;
+        }
+        function movedown()
+        {
+          redball.top=redball.top+30;
+        }
+        function movediagdownright()
+        {
+          redball.top=redball.top+30;
+            redball.left=redball.left+30;
+        }
+        function movediagdownleft()
+        {
+          redball.top=redball.top+30;
+            redball.left=redball.left-30;
+        }
+        function movediagupleft()
+        {
+          redball.top=redball.top-30;
+            redball.left=redball.left-30;
+        }
+        function movediagupright()
+        {
+          redball.top=redball.top-30;
+            redball.left=redball.left+30;
+        }
+        function square()
+        {
+          for(var i=1;i<=8;i++)
+        {
+          moveleft();
+        }
+          for(var i=1;i<=8;i++)
+        {
+          moveup();
+        }
+          for(var i=1;i<=8;i++)
+        {
+          moveright();
+        }
+          for(var i=1;i<=8;i++)
+        {
+       movedown();
+  }
+        }
+        function triangle()
+        {
+          for(var i=1;i<=7;i++)
+        {
+          moveright(); moveup();
+        }
+          for(var i=1;i<=7;i++)
+        {
+          moveright(); movedown();
+        }
+          for(var i=1;i<=7;i++)
+        {
+          moveleft(); moveleft();
+  }
+        }
+        function bounce()
+        {
+          for(var i=1;i<=10;i++)
+        {
+          moveleft(); moveup();
+        }
+          for(var i=0;i<=15;i++)
+        {
+          moveright(); moveup();
+        }
+          for(var i=0;i<=40;i++)
+        {
+          moveright(); movedown();
+        }
+          for(var i=0;i<=35;i++)
+        {
+          moveright(); moveup();
+  } 
+        }
+        function octagon()
+        {
+          
+        }
+        </script>
+        <script src="http://lrn.icstars.org/redball.js"></script>
+    </head>
+      <body>
+        The Motha-land!
+        <button onclick="sayhello();">Hello</button>
+        <table border="2px;" align= "center">
+        <tr>
+        <td><button onclick="movediagupleft();">&#8662;</button></td>
+        <td><button onclick="moveup();">&uArr;</button></td>
+        <td><button onclick="movediagupright();">&#8663;</button></td>
+        </tr>
+        <tr>
+        <td><button onclick="moveleft();">&lArr;</button></td>
+        <td><button onclick="bounce();">&#x25ef;</button></td>
+        <td><button onclick="moveright();">&rArr;</button></td>
+        </tr>
+            <img id="redball" src="redball.jpg"/>
+        <tr>
+        <td><button onclick="movediagdownleft();">&#8665;</button></td>
+        <td><button onclick="movedown();">&dArr;</button></td>
+        <td><button onclick="movediagdownright();">&#8664;</button></td>
+        </tr>
+        <tr>
+          <td><button onclick="triangle();">&#x25b2;</button></td>
+          <td><button onclick="square();">&#x25a0;</button></td>
+          <td><button onclick="octagon();">&empty;</button></td>
+        </tr>
+
+        </table>
+      </body>
+
+  </html>

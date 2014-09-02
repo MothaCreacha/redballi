@@ -1,0 +1,6 @@
+<!DOCTYPE html>
+<html>
+<body>
+<button onclick="hello.sayhello()">say it</button>
+</body>
+</html>
